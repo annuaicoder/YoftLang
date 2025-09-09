@@ -1,3 +1,12 @@
-# Engine-Lang
+Engine-Lang
 
-Engine is an interpreted programming language focused on speed and simplicity. It is being activley maintained and is under rapid develpoment so expect big bugs and issues. To run the test test.eng run: ```python -m engine test.eng```. The docs is at: test.com. 
+Engine is an interpreted programming language focused on speed and simplicity. It is actively maintained and under rapid development, so you may encounter bugs and breaking changes along the way.
+
+To run the included test file (test.eng), use:
+
+python -m engine test.eng
+
+
+📖 Documentation is available at: test.com
+
+🤝 Pull requests are welcome and encouraged!
