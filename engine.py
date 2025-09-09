@@ -1,4 +1,6 @@
 import re
+import sys
+import os
 
 # --- CUSTOM ERRORS ---
 class EngineError(Exception):
@@ -157,21 +159,33 @@ def run(code, env=None):
 
         i += 1
 
-# --- TEST PROGRAM ---
-program = """
-var x = 10
-var y = 20
-show x + y
+# --- FILE RUNNER ---
+def run_file(filename):
+    """Read and execute a .eng file."""
+    try:
+        with open(filename, 'r') as file:
+            code = file.read()
+        run(code)
+    except FileNotFoundError:
+        print(f"ENGINE-INTERPRETER: ERROR")
+        print(f"File '{filename}' not found.")
+    except Exception as e:
+        print(f"ENGINE-INTERPRETER: ERROR")
+        print(f"Error reading file '{filename}': {e}")
 
-if x < y {
-    show "x is smaller"
-}
-
-djfi
-
-FOREVER {
-    show "This will run forever!"
-}
-"""
-
-run(program)
+# --- COMMAND LINE ENTRY POINT ---
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python -m engine <filename.eng>")
+        print("")
+        print("Run Engine language files (.eng) through the interpreter.")
+        print("")
+        print("Example:")
+        print("  python -m engine my_program.eng")
+        sys.exit(1)
+    
+    filename = sys.argv[1]
+    if not filename.endswith('.eng'):
+        print(f"Warning: '{filename}' does not have a .eng extension.")
+    
+    run_file(filename)
