@@ -1,0 +1,11 @@
+var x = 10
+var y = 5
+
+show x + y
+
+var message = "Hello Engine!"
+show message
+
+if x {
+    show "x is truthy"
+}
