@@ -10,3 +10,5 @@
 📖 Documentation is available at: https://github.com/annuaicoder/Engine-Lang
 
 🤝 Pull requests are welcome and encouraged!
+
+# To learn aout the language and its syntax etc go to the quickstart folder.
