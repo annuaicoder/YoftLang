@@ -5,6 +5,7 @@ show x + y
 
 var message = "Hello Engine!"
 show message
+show "Hello World"
 
 if x {
     show "x is truthy"
