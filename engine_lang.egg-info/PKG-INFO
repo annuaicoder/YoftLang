@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: engine-lang
+Version: 0.1.0
+Summary: A fast and simple interpreted programming language
+Home-page: https://github.com/yourusername/Engine-Lang
+Author: Engine Language Team
+Author-email: 
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Interpreters
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: home-page
+Dynamic: requires-python
+
+# Engine-Lang
+
+## Engine is an interpreted programming language focused on speed and simplicity. It is actively maintained and under rapid development, so you may encounter bugs and breaking changes along the way.
+
+## To run the included test file (test.eng), use:
+
+```python -m engine test.eng```
+
+
+📖 Documentation is available at: https://github.com/annuaicoder/Engine-Lang
+
+🤝 Pull requests are welcome and encouraged!
+
+# To learn aout the language and its syntax etc go to the quickstart folder.
