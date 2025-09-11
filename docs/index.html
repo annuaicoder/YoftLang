@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engine Language - Fast & Simple Programming</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="hero">
+            <div class="logo-section">
+                <div class="engine-logo">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="80" height="80" rx="16" fill="url(#gradient)"/>
+                        <path d="M20 25h40v6H20v-6zm0 12h32v6H20v-6zm0 12h36v6H20v-6zm0 12h28v6H20v-6z" fill="white"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea"/>
+                                <stop offset="100%" style="stop-color:#764ba2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h1 class="title">Engine Language</h1>
+                <p class="subtitle">Fast & Simple Programming</p>
+            </div>
+            
+            <div class="status-badge">
+                <span class="status-indicator"></span>
+                Under Rapid Development
+            </div>
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>Welcome to Engine</h2>
+            <p class="intro-text">
+                Engine is an interpreted programming language focused on <strong>speed</strong> and <strong>simplicity</strong>. 
+                Designed for developers who want to write clean, readable code without unnecessary complexity.
+            </p>
+        </section>
+
+        <!-- Quick Start Section -->
+        <section class="quick-start">
+            <h2>Quick Start</h2>
+            <div class="install-steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <div class="step-content">
+                        <h3>Clone the Repository</h3>
+                        <pre><code class="language-bash">git clone https://github.com/yourusername/Engine-Lang.git
+cd Engine-Lang</code></pre>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <div class="step-content">
+                        <h3>Run Your First Program</h3>
+                        <pre><code class="language-bash">python -m engine test.eng</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Example Code Section -->
+        <section class="examples">
+            <h2>Example Code</h2>
+            <div class="code-example">
+                <h3>Variables & Arithmetic</h3>
+                <pre><code class="language-engine">var x = 10
+var y = 5
+
+show x + y
+show x * y</code></pre>
+            </div>
+
+            <div class="code-example">
+                <h3>Strings & Output</h3>
+                <pre><code class="language-engine">var message = "Hello Engine!"
+show message
+
+var name = "World"
+show "Hello " + name</code></pre>
+            </div>
+
+            <div class="code-example">
+                <h3>Conditional Logic</h3>
+                <pre><code class="language-engine">var score = 85
+
+if score {
+    show "You passed!"
+}
+
+var temperature = 25
+if temperature {
+    show "It's warm outside"
+}</code></pre>
+            </div>
+
+            <div class="code-example">
+                <h3>Infinite Loops</h3>
+                <pre><code class="language-engine">var counter = 0
+
+FOREVER {
+    show counter
+    var counter = counter + 1
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Execution</h3>
+                    <p>Optimized interpreter for quick program execution</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Simple Syntax</h3>
+                    <p>Clean, readable syntax that's easy to learn</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Minimal Setup</h3>
+                    <p>Just Python required - no complex dependencies</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Active Development</h3>
+                    <p>Continuously improved with new features</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Notice -->
+        <section class="development-notice">
+            <div class="notice-content">
+                <h2>⚠️ Development Status</h2>
+                <p>
+                    Engine is <strong>actively maintained</strong> and under <strong>rapid development</strong>. 
+                    You may encounter bugs and breaking changes as we continue to improve the language. 
+                    We appreciate your patience and welcome feedback!
+                </p>
+            </div>
+        </section>
+
+        <!-- Links Section -->
+        <section class="links">
+            <h2>Resources</h2>
+            <div class="link-grid">
+                <a href="https://github.com/yourusername/Engine-Lang" class="link-card">
+                    <div class="link-icon">📁</div>
+                    <h3>GitHub Repository</h3>
+                    <p>View source code, report issues, and contribute</p>
+                </a>
+                <a href="#blog" class="link-card">
+                    <div class="link-icon">📝</div>
+                    <h3>Blog & Updates</h3>
+                    <p>Latest news and development updates</p>
+                </a>
+                <a href="#docs" class="link-card">
+                    <div class="link-icon">📚</div>
+                    <h3>Documentation</h3>
+                    <p>Complete language reference and guides</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Blog/Announcements Section -->
+        <section class="blog" id="blog">
+            <h2>Latest Updates</h2>
+            <div class="blog-posts">
+                <article class="blog-post">
+                    <div class="post-date">2025 Sep 10</div>
+                    <h3>Engine Language v0.1.0 Released</h3>
+                    <p>Initial release of Engine with basic variable assignment, arithmetic operations, and conditional statements.</p>
+                </article>
+                
+                <article class="blog-post">
+                    <div class="post-date">2025 Sep 9</div>
+                    <h3>Introducing Engine Language</h3>
+                    <p>We're excited to announce Engine, a new interpreted programming language focused on simplicity and speed.</p>
+                </article>
+                
+                <article class="blog-post">
+                    <div class="post-date">2025 Sep 8</div>
+                    <h3>Development Roadmap</h3>
+                    <p>Our plans for Engine include function definitions, advanced control flow, and standard library modules.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Engine Language. Open source and actively developed.</p>
+                <p>🤝 Pull requests are welcome and encouraged!</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
