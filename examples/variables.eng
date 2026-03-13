@@ -1,0 +1,19 @@
+# Variables and expressions
+var name = "Engine"
+var x = 10
+var y = 3
+
+show "Language: " + name
+show x + y
+show x - y
+show x * y
+show x / y
+show x % y
+
+# Reassignment
+x = 42
+show "x is now: " + str(x)
+
+# Floats
+var pi = 3.14
+show "Pi is roughly " + str(pi)

@@ -1,0 +1,9 @@
+{
+    "name": "Engine",
+    "scopeName": "source.engine",
+    "patterns": [
+      { "match": "\\b(var|show|func|if|else|while|for|return)\\b", "name": "keyword.control.engine" },
+      { "match": "#.*$", "name": "comment.line.number-sign.engine" },
+      { "match": "\".*?\"", "name": "string.quoted.double.engine" }
+    ]
+  }

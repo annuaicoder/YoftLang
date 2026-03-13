@@ -1,0 +1,5 @@
+Engine:
+  type: programming
+  extensions: [".eng"]
+  tm_scope: source.engine
+  interpreters: ["engine"]
