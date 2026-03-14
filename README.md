@@ -4,6 +4,13 @@
 
 ---
 
+## Install
+
+Install Engine Lang directly from GitHub:
+
+```bash
+pip install git+https://github.com/annuaicoder/EngineLang.git
+
 ## Quick Start
 
 ```bash
