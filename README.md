@@ -1,6 +1,6 @@
 # Engine-Lang
 
-# Built by @annuai
+# Built by @annuaic
 
 **Engine** is a minimal, readable interpreted programming language written in Python. It is actively maintained and under rapid development — expect bugs and breaking changes along the way.
 
