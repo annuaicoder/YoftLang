@@ -1,4 +1,4 @@
-# Engine-Lang - Mini
+# Engine-Lang - Minim
 
 # Built by @annuaicoder
 
