@@ -1,4 +1,4 @@
-# Engine-Lang - Mi
+# Engine-Lang - Mini
 
 # Built by @annuaicoder
 
