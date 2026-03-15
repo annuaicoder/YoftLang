@@ -21,7 +21,7 @@ pip install git+https://github.com/annuaicoder/EngineLang.git
 # Run a script
 python -m engine test.eng
 
-# Or if installed via pip:
+# Or
 engine test.eng
 
 # Start interactive REPL
