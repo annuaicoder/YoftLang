@@ -2,7 +2,7 @@
 
 # Built by @annuaicoder
 
-# Link to Youtube Channel / Handle: @co
+# Link to Youtube Channel / Handle: @cod
 
 **Engine** is a minimal, readable interpreted programming language written in Python. It is actively maintained and under rapid development — expect bugs and breaking changes along the way.
 
