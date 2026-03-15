@@ -1,4 +1,4 @@
-# Engine-Lang - Minima
+# Engine-Lang - Minimal
 
 # Built by @annuaicoder
 
