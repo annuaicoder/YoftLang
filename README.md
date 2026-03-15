@@ -1,4 +1,4 @@
-# Engine-Lang - Minimal - Fast and extremel
+# Engine-Lang - Minimal - Fast and extremely
 
 # Built by @annuaicoder
 
