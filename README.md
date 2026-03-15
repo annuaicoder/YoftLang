@@ -1,4 +1,4 @@
-# Engine-Lang - Minimal, Fas
+# Engine-Lang - Minimal, Fast
 
 # Built by @annuaicoder
 
