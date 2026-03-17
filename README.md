@@ -1,38 +1,68 @@
+<<<<<<< HEAD
 # Engine-Lang - Minimal - Fast and Extremely Easy
 
 # Built by @annuaicoder
 
 ## Link to Youtube Channel / Handle: @codewithanas007
+=======
+# YoftLang
+>>>>>>> a3020a6 (Full Rebrand Change To Yoft, Make Language Compiled, Rewrite Compiler In Go, Full Redesign)
 
-**Engine** is a minimal, readable interpreted programming language written in Python. It is actively maintained and under rapid development — expect bugs and breaking changes along the way.
+**Yoft** is a fast, compiled programming language that produces native binaries. It features clean syntax, zero runtime dependencies, and compiles through C for maximum performance.
+
+> Formerly known as **Engine** — rewritten from the ground up as a compiled language.
 
 ---
 
 ## Install
 
-Install Engine Lang directly from GitHub:
+### From Source (requires Go 1.21+ and a C compiler)
 
 ```bash
-pip install git+https://github.com/annuaicoder/EngineLang.git
+git clone https://github.com/annuaicoder/Engine-Lang.git
+cd Engine-Lang
+go build -o yoft .
+```
+
+Move to your PATH:
+
+```bash
+sudo mv yoft /usr/local/bin/
+```
+
+---
 
 ## Quick Start
 
 ```bash
-# Run a script
-python -m engine test.eng
+# Compile and run immediately
+yoft run hello.eng
 
+<<<<<<< HEAD
 # Or
 engine test.eng
+=======
+# Compile to native binary
+yoft build hello.eng -o hello
+>>>>>>> a3020a6 (Full Rebrand Change To Yoft, Make Language Compiled, Rewrite Compiler In Go, Full Redesign)
 
-# Start interactive REPL
-python -m engine
+# Run the compiled binary directly
+./hello
+
+# Shorthand: just pass the file
+yoft hello.eng
 ```
 
-### Install (editable / development)
+---
 
-```bash
-pip install -e .
-```
+## How It Works
+
+Yoft is a **true compiled language**:
+
+1. Your `.eng` source is parsed by the Yoft compiler (written in Go)
+2. The compiler generates optimized C code
+3. The system C compiler (`cc`) produces a native binary
+4. The result is a standalone executable — no runtime, no VM, no dependencies
 
 ---
 
@@ -41,7 +71,7 @@ pip install -e .
 ### Variables
 
 ```
-var name = "Engine"
+var name = "Yoft"
 var x = 10
 var pi = 3.14
 var active = true
@@ -126,10 +156,9 @@ var items = [1, 2, 3]
 show items[0]
 items.push(4)
 show len(items)
-items.sort()
 ```
 
-List methods: `push`, `pop`, `join`, `contains`, `reverse`, `sort`, `slice`, `length`.
+List methods: `push`, `pop`, `join`, `contains`, `reverse`, `length`.
 
 ### Strings
 
@@ -137,11 +166,9 @@ List methods: `push`, `pop`, `join`, `contains`, `reverse`, `sort`, `slice`, `le
 var s = "hello"
 show s.upper()
 show s.contains("ell")
-show s.split("l")
-show s.replace("l", "r")
 ```
 
-String methods: `upper`, `lower`, `strip`, `split`, `replace`, `contains`, `starts_with`, `ends_with`, `find`, `length`.
+String methods: `upper`, `lower`, `contains`, `length`.
 
 ### Built-in Functions
 
@@ -158,9 +185,10 @@ String methods: `upper`, `lower`, `strip`, `split`, `replace`, `contains`, `star
 | `push(list, item)` | Append to list |
 | `pop(list)` | Remove last item |
 | `abs(x)` | Absolute value |
-| `min(...)` | Minimum value |
-| `max(...)` | Maximum value |
+| `min(a, b)` | Minimum of two values |
+| `max(a, b)` | Maximum of two values |
 | `round(x)` | Round a number |
+| `rand(a, b)` | Random integer in [a, b] |
 
 ### Imports
 
@@ -179,19 +207,11 @@ var x = 10  # inline comment
 
 ## Examples
 
-See the `examples/` folder:
-
-- `hello.eng` — Hello World
-- `variables.eng` — Variables and expressions
-- `control_flow.eng` — If/else, while, for, booleans
-- `functions.eng` — Functions, recursion, closures
-- `lists_strings.eng` — Lists and string operations
-- `fizzbuzz.eng` — Classic FizzBuzz
-
-Run any example:
+See the `examples/` folder and `demo.eng`:
 
 ```bash
-python -m engine examples/fizzbuzz.eng
+yoft run demo.eng
+yoft run examples/fizzbuzz.eng
 ```
 
 ---
@@ -199,21 +219,34 @@ python -m engine examples/fizzbuzz.eng
 ## Project Structure
 
 ```
-Engine-Lang/
-  engine/
-    __init__.py        # Package exports
-    __main__.py        # CLI entry point & REPL
-    interpreter.py     # Lexer, parser, AST, interpreter
-  examples/            # Example .eng scripts
-  quickstart/          # Beginner docs
-  test.eng             # Quick test script
-  setup.py             # Package setup
-  pyproject.toml       # Build config
+YoftLang/
+  main.go                  # CLI entry point
+  compiler/
+    lexer/lexer.go         # Tokenizer
+    parser/parser.go       # Recursive descent parser
+    ast/ast.go             # AST node definitions
+    codegen/codegen.go     # C code generator
+  examples/                # Example .eng scripts
+  docs/                    # Website and documentation
+  demo.eng                 # Demo script
+  go.mod                   # Go module
 ```
 
 ---
 
-Documentation: https://github.com/annuaicoder/Engine-Lang
+## CLI Reference
+
+```
+yoft build <file.eng> [-o output]   Compile to native binary
+yoft run <file.eng>                  Compile and run immediately
+yoft <file.eng>                      Shorthand for 'yoft run'
+yoft version                         Show version
+yoft help                            Show help
+```
+
+---
+
+Website & Docs: https://annuaicoder.github.io/Engine-Lang/
 
 Pull requests are welcome and encouraged!
 

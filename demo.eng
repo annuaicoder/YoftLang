@@ -1,7 +1,7 @@
-# Engine Language Demo
+# Yoft Language Demo
 
 # Variables
-var name = "Engine"
+var name = "Yoft"
 var version = 1
 show "Welcome to " + name + " v" + str(version) + "!"
 
@@ -25,7 +25,7 @@ for i in range(10) {
 }
 
 # Lists and strings
-var langs = ["Engine", "Python", "Rust", "Go"]
+var langs = ["Yoft", "Python", "Rust", "Go"]
 show "--- Languages ---"
 for lang in langs {
     show lang.upper()

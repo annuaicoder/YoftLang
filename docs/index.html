@@ -3,211 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engine Language - Fast & Simple Programming</title>
+    <title>Yoft - A Compiled Programming Language</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="hero">
-            <div class="logo-section">
-                <div class="engine-logo">
-                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="80" height="80" rx="16" fill="url(#gradient)"/>
-                        <path d="M20 25h40v6H20v-6zm0 12h32v6H20v-6zm0 12h36v6H20v-6zm0 12h28v6H20v-6z" fill="white"/>
-                        <defs>
-                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#667eea"/>
-                                <stop offset="100%" style="stop-color:#764ba2"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <h1 class="title">Engine Language</h1>
-                <p class="subtitle">Fast & Simple Programming</p>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#ng)"/><path d="M8 10h16v2.5H8zm0 5h13v2.5H8zm0 5h14.5v2.5H8zm0 5h11v2.5H8z" fill="#fff"/><defs><linearGradient id="ng" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs></svg>
+                <span>Yoft</span>
+            </a>
+            <div class="nav-links">
+                <a href="#install">Install</a>
+                <a href="#docs">Docs</a>
+                <a href="#examples">Examples</a>
+                <a href="#reference">Reference</a>
+                <a href="https://github.com/annuaicoder/Engine-Lang" class="nav-gh">GitHub</a>
             </div>
-            
-            <div class="status-badge">
-                <span class="status-indicator"></span>
-                Under Rapid Development
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-badge">Formerly Engine &mdash; now compiled &amp; blazing fast</div>
+            <h1 class="hero-title">The <span class="gradient-text">Yoft</span> Programming Language</h1>
+            <p class="hero-sub">A compiled language that produces native binaries. Clean syntax, zero runtime dependencies, maximum performance.</p>
+            <div class="hero-actions">
+                <a href="#install" class="btn btn-primary">Get Started</a>
+                <a href="#docs" class="btn btn-secondary">Read the Docs</a>
             </div>
-        </header>
+            <div class="hero-code">
+                <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">hello.eng</span></div>
+<pre class="code-block"><span class="kw">var</span> name = <span class="str">"Yoft"</span>
+<span class="kw">show</span> <span class="str">"Hello from "</span> + name + <span class="str">"!"</span>
 
-        <!-- Introduction Section -->
-        <section class="intro">
-            <h2>Welcome to Engine</h2>
-            <p class="intro-text">
-                Engine is an interpreted programming language focused on <strong>speed</strong> and <strong>simplicity</strong>. 
-                Designed for developers who want to write clean, readable code without unnecessary complexity.
-            </p>
-        </section>
-
-        <!-- Quick Start Section -->
-        <section class="quick-start">
-            <h2>Quick Start</h2>
-            <div class="install-steps">
-                <div class="step">
-                    <span class="step-number">1</span>
-                    <div class="step-content">
-                        <h3>Clone the Repository</h3>
-                        <pre><code class="language-bash">git clone https://github.com/yourusername/Engine-Lang.git
-cd Engine-Lang</code></pre>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <span class="step-number">2</span>
-                    <div class="step-content">
-                        <h3>Run Your First Program</h3>
-                        <pre><code class="language-bash">python -m engine test.eng</code></pre>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Example Code Section -->
-        <section class="examples">
-            <h2>Example Code</h2>
-            <div class="code-example">
-                <h3>Variables & Arithmetic</h3>
-                <pre><code class="language-engine">var x = 10
-var y = 5
-
-show x + y
-show x * y</code></pre>
-            </div>
-
-            <div class="code-example">
-                <h3>Strings & Output</h3>
-                <pre><code class="language-engine">var message = "Hello Engine!"
-show message
-
-var name = "World"
-show "Hello " + name</code></pre>
-            </div>
-
-            <div class="code-example">
-                <h3>Conditional Logic</h3>
-                <pre><code class="language-engine">var score = 85
-
-if score {
-    show "You passed!"
+<span class="kw">func</span> <span class="fn">fib</span>(n) {
+    <span class="kw">if</span> n &lt;= <span class="num">1</span> { <span class="kw">return</span> n }
+    <span class="kw">return</span> <span class="fn">fib</span>(n - <span class="num">1</span>) + <span class="fn">fib</span>(n - <span class="num">2</span>)
 }
 
-var temperature = 25
-if temperature {
-    show "It's warm outside"
-}</code></pre>
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>) {
+    <span class="kw">show</span> <span class="fn">fib</span>(i)
+}</pre>
             </div>
+        </div>
+    </header>
 
-            <div class="code-example">
-                <h3>Infinite Loops</h3>
-                <pre><code class="language-engine">var counter = 0
-
-FOREVER {
-    show counter
-    var counter = counter + 1
-}</code></pre>
+    <!-- How it works -->
+    <section class="section" id="how">
+        <div class="container">
+            <h2 class="section-title">How Yoft Works</h2>
+            <p class="section-sub">Yoft is a true compiled language &mdash; your code becomes a native binary.</p>
+            <div class="pipeline">
+                <div class="pipe-step">
+                    <div class="pipe-icon">1</div>
+                    <h3>.eng source</h3>
+                    <p>Write clean Yoft code</p>
+                </div>
+                <div class="pipe-arrow">&rarr;</div>
+                <div class="pipe-step">
+                    <div class="pipe-icon">2</div>
+                    <h3>Go compiler</h3>
+                    <p>Lexer &rarr; Parser &rarr; AST</p>
+                </div>
+                <div class="pipe-arrow">&rarr;</div>
+                <div class="pipe-step">
+                    <div class="pipe-icon">3</div>
+                    <h3>C code gen</h3>
+                    <p>Optimized C output</p>
+                </div>
+                <div class="pipe-arrow">&rarr;</div>
+                <div class="pipe-step">
+                    <div class="pipe-icon">4</div>
+                    <h3>Native binary</h3>
+                    <p>Standalone executable</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Features Section -->
-        <section class="features">
-            <h2>Key Features</h2>
+    <!-- Features -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Why Yoft?</h2>
             <div class="feature-grid">
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Fast Execution</h3>
-                    <p>Optimized interpreter for quick program execution</p>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><svg width="28" height="28" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M13 2L3 14h10l-1 12 10-12H12l1-12z"/></svg></div>
+                    <h3>Compiled &amp; Fast</h3>
+                    <p>Compiles to native machine code through C. No interpreter, no VM, no overhead.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Simple Syntax</h3>
-                    <p>Clean, readable syntax that's easy to learn</p>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><svg width="28" height="28" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="14" cy="14" r="12"/><path d="M14 8v6l4 4"/></svg></div>
+                    <h3>Zero Dependencies</h3>
+                    <p>The compiled binary is completely standalone. Ship it anywhere, run it everywhere.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🔧</div>
-                    <h3>Minimal Setup</h3>
-                    <p>Just Python required - no complex dependencies</p>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><svg width="28" height="28" fill="none" stroke="#f59e0b" stroke-width="2"><rect x="3" y="3" width="22" height="22" rx="3"/><path d="M8 10h12M8 14h8M8 18h10"/></svg></div>
+                    <h3>Clean Syntax</h3>
+                    <p>Readable, minimal syntax. No semicolons, no type annotations, just code.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Active Development</h3>
-                    <p>Continuously improved with new features</p>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><svg width="28" height="28" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M4 4h8l2 2h10v18H4z"/></svg></div>
+                    <h3>Module System</h3>
+                    <p>Import other .eng files to organize your code into reusable modules.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Development Notice -->
-        <section class="development-notice">
-            <div class="notice-content">
-                <h2>⚠️ Development Status</h2>
-                <p>
-                    Engine is <strong>actively maintained</strong> and under <strong>rapid development</strong>. 
-                    You may encounter bugs and breaking changes as we continue to improve the language. 
-                    We appreciate your patience and welcome feedback!
-                </p>
+    <!-- Install -->
+    <section class="section" id="install">
+        <div class="container">
+            <h2 class="section-title">Installation</h2>
+            <p class="section-sub">Requires Go 1.21+ and a C compiler (gcc/clang).</p>
+            <div class="install-box">
+                <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">terminal</span></div>
+<pre class="code-block"><span class="cmt"># Clone and build</span>
+git clone https://github.com/annuaicoder/Engine-Lang.git
+cd Engine-Lang
+go build -o yoft .
+
+<span class="cmt"># Install globally</span>
+sudo mv yoft /usr/local/bin/
+
+<span class="cmt"># Verify</span>
+yoft version</pre>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Links Section -->
-        <section class="links">
-            <h2>Resources</h2>
-            <div class="link-grid">
-                <a href="https://github.com/annuaicoder/Engine-Lang" class="link-card">
-                    <div class="link-icon">📁</div>
-                    <h3>GitHub Repository</h3>
-                    <p>View source code, report issues, and contribute</p>
-                </a>
-                <a href="#blog" class="link-card">
-                    <div class="link-icon">📝</div>
-                    <h3>Blog & Updates</h3>
-                    <p>Latest news and development updates</p>
-                </a>
-                <a href="#docs" class="link-card">
-                    <div class="link-icon">📚</div>
-                    <h3>Documentation</h3>
-                    <p>Complete language reference and guides</p>
-                </a>
+    <!-- Quick Start -->
+    <section class="section section-dark" id="quickstart">
+        <div class="container">
+            <h2 class="section-title">Quick Start</h2>
+            <div class="qs-grid">
+                <div class="qs-card">
+                    <h3>1. Write a program</h3>
+                    <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">hello.eng</span></div>
+<pre class="code-block"><span class="kw">var</span> name = <span class="str">"World"</span>
+<span class="kw">show</span> <span class="str">"Hello, "</span> + name + <span class="str">"!"</span></pre>
+                </div>
+                <div class="qs-card">
+                    <h3>2. Compile &amp; run</h3>
+                    <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">terminal</span></div>
+<pre class="code-block"><span class="cmt"># Compile and run in one step</span>
+yoft run hello.eng
+
+<span class="cmt"># Or compile to binary</span>
+yoft build hello.eng -o hello
+./hello</pre>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Blog/Announcements Section -->
-        <section class="blog" id="blog">
-            <h2>Latest Updates</h2>
-            <div class="blog-posts">
-                <article class="blog-post">
-                    <div class="post-date">2025 Sep 10</div>
-                    <h3>Engine Language v0.1.0 Released</h3>
-                    <p>Initial release of Engine with basic variable assignment, arithmetic operations, and conditional statements.</p>
-                </article>
-                
-                <article class="blog-post">
-                    <div class="post-date">2025 Sep 9</div>
-                    <h3>Introducing Engine Language</h3>
-                    <p>We're excited to announce Engine, a new interpreted programming language focused on simplicity and speed.</p>
-                </article>
-                
-                <article class="blog-post">
-                    <div class="post-date">2025 Sep 8</div>
-                    <h3>Development Roadmap</h3>
-                    <p>Our plans for Engine include function definitions, advanced control flow, and standard library modules.</p>
-                </article>
+    <!-- Documentation -->
+    <section class="section" id="docs">
+        <div class="container">
+            <h2 class="section-title">Documentation</h2>
+            <p class="section-sub">Everything you need to write Yoft programs.</p>
+
+            <!-- Variables -->
+            <div class="doc-block" id="doc-variables">
+                <h3 class="doc-heading">Variables</h3>
+                <p>Declare variables with <code>var</code>. Reassign with <code>=</code>.</p>
+<pre class="code-block"><span class="kw">var</span> name = <span class="str">"Yoft"</span>
+<span class="kw">var</span> x = <span class="num">10</span>
+<span class="kw">var</span> pi = <span class="num">3.14</span>
+<span class="kw">var</span> active = <span class="kw">true</span>
+
+x = <span class="num">42</span>         <span class="cmt"># reassign</span></pre>
+                <p>Supported types: <code>int</code>, <code>float</code>, <code>string</code>, <code>bool</code>, <code>list</code>, <code>null</code>.</p>
             </div>
-        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2025 Engine Language. Open source and actively developed.</p>
-                <p>🤝 Pull requests are welcome and encouraged!</p>
+            <!-- Output -->
+            <div class="doc-block" id="doc-output">
+                <h3 class="doc-heading">Output</h3>
+<pre class="code-block"><span class="kw">show</span> <span class="str">"Hello World"</span>
+<span class="kw">show</span> x + y
+<span class="kw">show</span> <span class="str">"Result: "</span> + <span class="fn">str</span>(x * y)</pre>
             </div>
-        </footer>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+            <!-- Operators -->
+            <div class="doc-block" id="doc-operators">
+                <h3 class="doc-heading">Operators</h3>
+                <div class="doc-table-wrap">
+                    <table class="doc-table">
+                        <tr><th>Category</th><th>Operators</th></tr>
+                        <tr><td>Arithmetic</td><td><code>+</code> <code>-</code> <code>*</code> <code>/</code> <code>%</code></td></tr>
+                        <tr><td>Comparison</td><td><code>==</code> <code>!=</code> <code>&lt;</code> <code>&gt;</code> <code>&lt;=</code> <code>&gt;=</code></td></tr>
+                        <tr><td>Logical</td><td><code>and</code> <code>or</code> <code>not</code></td></tr>
+                        <tr><td>String</td><td><code>+</code> (concatenation) &nbsp; <code>*</code> (repeat)</td></tr>
+                    </table>
+                </div>
+                <p><code>/</code> performs integer division when both operands are integers.</p>
+            </div>
+
+            <!-- Control Flow -->
+            <div class="doc-block" id="doc-control">
+                <h3 class="doc-heading">Control Flow</h3>
+                <h4>If / Else</h4>
+<pre class="code-block"><span class="kw">if</span> score &gt;= <span class="num">90</span> {
+    <span class="kw">show</span> <span class="str">"A"</span>
+} <span class="kw">else</span> <span class="kw">if</span> score &gt;= <span class="num">80</span> {
+    <span class="kw">show</span> <span class="str">"B"</span>
+} <span class="kw">else</span> {
+    <span class="kw">show</span> <span class="str">"C"</span>
+}</pre>
+                <h4>While Loop</h4>
+<pre class="code-block"><span class="kw">var</span> i = <span class="num">0</span>
+<span class="kw">while</span> i &lt; <span class="num">5</span> {
+    <span class="kw">show</span> i
+    i = i + <span class="num">1</span>
+}</pre>
+                <h4>For Loop</h4>
+<pre class="code-block"><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>) {
+    <span class="kw">show</span> i
+}
+
+<span class="kw">var</span> items = [<span class="str">"a"</span>, <span class="str">"b"</span>, <span class="str">"c"</span>]
+<span class="kw">for</span> item <span class="kw">in</span> items {
+    <span class="kw">show</span> item
+}</pre>
+            </div>
+
+            <!-- Functions -->
+            <div class="doc-block" id="doc-functions">
+                <h3 class="doc-heading">Functions</h3>
+<pre class="code-block"><span class="kw">func</span> <span class="fn">greet</span>(name) {
+    <span class="kw">show</span> <span class="str">"Hello, "</span> + name + <span class="str">"!"</span>
+}
+
+<span class="kw">func</span> <span class="fn">add</span>(a, b) {
+    <span class="kw">return</span> a + b
+}
+
+<span class="fn">greet</span>(<span class="str">"Alice"</span>)
+<span class="kw">show</span> <span class="fn">add</span>(<span class="num">3</span>, <span class="num">7</span>)</pre>
+                <p>Functions support recursion, local scope, and closures.</p>
+            </div>
+
+            <!-- Lists -->
+            <div class="doc-block" id="doc-lists">
+                <h3 class="doc-heading">Lists</h3>
+<pre class="code-block"><span class="kw">var</span> items = [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>]
+<span class="kw">show</span> items[<span class="num">0</span>]          <span class="cmt"># 1</span>
+<span class="kw">show</span> <span class="fn">len</span>(items)       <span class="cmt"># 4</span>
+items.<span class="fn">push</span>(<span class="num">5</span>)
+items.<span class="fn">pop</span>()</pre>
+                <div class="doc-table-wrap">
+                    <table class="doc-table">
+                        <tr><th>Method</th><th>Description</th></tr>
+                        <tr><td><code>.push(item)</code></td><td>Append item to end</td></tr>
+                        <tr><td><code>.pop()</code></td><td>Remove and return last item</td></tr>
+                        <tr><td><code>.length</code></td><td>Number of elements</td></tr>
+                        <tr><td><code>.contains(x)</code></td><td>Check if item exists</td></tr>
+                        <tr><td><code>.reverse()</code></td><td>Reverse in place</td></tr>
+                        <tr><td><code>.join(sep)</code></td><td>Join elements with separator</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Strings -->
+            <div class="doc-block" id="doc-strings">
+                <h3 class="doc-heading">Strings</h3>
+<pre class="code-block"><span class="kw">var</span> s = <span class="str">"hello world"</span>
+<span class="kw">show</span> s.<span class="fn">upper</span>()         <span class="cmt"># HELLO WORLD</span>
+<span class="kw">show</span> s.<span class="fn">lower</span>()         <span class="cmt"># hello world</span>
+<span class="kw">show</span> s.<span class="fn">contains</span>(<span class="str">"ell"</span>) <span class="cmt"># true</span>
+<span class="kw">show</span> s.<span class="fn">length</span>          <span class="cmt"># 11</span></pre>
+                <div class="doc-table-wrap">
+                    <table class="doc-table">
+                        <tr><th>Method</th><th>Description</th></tr>
+                        <tr><td><code>.upper()</code></td><td>Uppercase copy</td></tr>
+                        <tr><td><code>.lower()</code></td><td>Lowercase copy</td></tr>
+                        <tr><td><code>.contains(s)</code></td><td>Check substring</td></tr>
+                        <tr><td><code>.length</code></td><td>String length</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Imports -->
+            <div class="doc-block" id="doc-imports">
+                <h3 class="doc-heading">Imports</h3>
+<pre class="code-block"><span class="kw">import</span> <span class="str">"math_utils.eng"</span></pre>
+                <p>Import executes another <code>.eng</code> file and brings its definitions into the current scope.</p>
+            </div>
+
+            <!-- Comments -->
+            <div class="doc-block" id="doc-comments">
+                <h3 class="doc-heading">Comments</h3>
+<pre class="code-block"><span class="cmt"># This is a comment</span>
+<span class="kw">var</span> x = <span class="num">10</span>  <span class="cmt"># inline comment</span></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built-in Reference -->
+    <section class="section section-dark" id="reference">
+        <div class="container">
+            <h2 class="section-title">Built-in Functions</h2>
+            <div class="doc-table-wrap">
+                <table class="doc-table ref-table">
+                    <tr><th>Function</th><th>Description</th><th>Example</th></tr>
+                    <tr><td><code>show(x)</code></td><td>Print a value to stdout</td><td><code>show "hello"</code></td></tr>
+                    <tr><td><code>len(x)</code></td><td>Length of string or list</td><td><code>len("abc") &rarr; 3</code></td></tr>
+                    <tr><td><code>type(x)</code></td><td>Type name as string</td><td><code>type(42) &rarr; "int"</code></td></tr>
+                    <tr><td><code>int(x)</code></td><td>Convert to integer</td><td><code>int("42") &rarr; 42</code></td></tr>
+                    <tr><td><code>float(x)</code></td><td>Convert to float</td><td><code>float("3.14") &rarr; 3.14</code></td></tr>
+                    <tr><td><code>str(x)</code></td><td>Convert to string</td><td><code>str(42) &rarr; "42"</code></td></tr>
+                    <tr><td><code>input(prompt)</code></td><td>Read line from stdin</td><td><code>input("Name: ")</code></td></tr>
+                    <tr><td><code>range(n)</code></td><td>List [0, 1, ... n-1]</td><td><code>range(5)</code></td></tr>
+                    <tr><td><code>push(list, x)</code></td><td>Append to list</td><td><code>push(items, 4)</code></td></tr>
+                    <tr><td><code>pop(list)</code></td><td>Remove last element</td><td><code>pop(items)</code></td></tr>
+                    <tr><td><code>abs(x)</code></td><td>Absolute value</td><td><code>abs(-5) &rarr; 5</code></td></tr>
+                    <tr><td><code>min(a, b)</code></td><td>Minimum of two values</td><td><code>min(3, 7) &rarr; 3</code></td></tr>
+                    <tr><td><code>max(a, b)</code></td><td>Maximum of two values</td><td><code>max(3, 7) &rarr; 7</code></td></tr>
+                    <tr><td><code>round(x)</code></td><td>Round to nearest integer</td><td><code>round(3.7) &rarr; 4</code></td></tr>
+                    <tr><td><code>rand(a, b)</code></td><td>Random int in [a, b]</td><td><code>rand(1, 100)</code></td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples -->
+    <section class="section" id="examples">
+        <div class="container">
+            <h2 class="section-title">Examples</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h3>FizzBuzz</h3>
+<pre class="code-block"><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">20</span>) {
+    <span class="kw">if</span> i % <span class="num">15</span> == <span class="num">0</span> {
+        <span class="kw">show</span> <span class="str">"FizzBuzz"</span>
+    } <span class="kw">else</span> <span class="kw">if</span> i % <span class="num">3</span> == <span class="num">0</span> {
+        <span class="kw">show</span> <span class="str">"Fizz"</span>
+    } <span class="kw">else</span> <span class="kw">if</span> i % <span class="num">5</span> == <span class="num">0</span> {
+        <span class="kw">show</span> <span class="str">"Buzz"</span>
+    } <span class="kw">else</span> {
+        <span class="kw">show</span> i
+    }
+}</pre>
+                </div>
+                <div class="example-card">
+                    <h3>Recursive Fibonacci</h3>
+<pre class="code-block"><span class="kw">func</span> <span class="fn">fib</span>(n) {
+    <span class="kw">if</span> n &lt;= <span class="num">1</span> {
+        <span class="kw">return</span> n
+    }
+    <span class="kw">return</span> <span class="fn">fib</span>(n-<span class="num">1</span>) + <span class="fn">fib</span>(n-<span class="num">2</span>)
+}
+
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>) {
+    <span class="kw">show</span> <span class="fn">fib</span>(i)
+}</pre>
+                </div>
+                <div class="example-card">
+                    <h3>String Processing</h3>
+<pre class="code-block"><span class="kw">var</span> msg = <span class="str">"hello yoft"</span>
+<span class="kw">show</span> msg.<span class="fn">upper</span>()
+<span class="kw">show</span> msg.<span class="fn">contains</span>(<span class="str">"yoft"</span>)
+
+<span class="kw">var</span> langs = [<span class="str">"Yoft"</span>, <span class="str">"Go"</span>, <span class="str">"Rust"</span>]
+<span class="kw">show</span> langs.<span class="fn">join</span>(<span class="str">", "</span>)</pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLI Reference -->
+    <section class="section section-dark" id="cli">
+        <div class="container">
+            <h2 class="section-title">CLI Reference</h2>
+            <div class="doc-table-wrap">
+                <table class="doc-table ref-table">
+                    <tr><th>Command</th><th>Description</th></tr>
+                    <tr><td><code>yoft build &lt;file&gt; [-o out]</code></td><td>Compile to a native binary</td></tr>
+                    <tr><td><code>yoft run &lt;file&gt;</code></td><td>Compile and run immediately</td></tr>
+                    <tr><td><code>yoft &lt;file.eng&gt;</code></td><td>Shorthand for <code>yoft run</code></td></tr>
+                    <tr><td><code>yoft version</code></td><td>Print Yoft version</td></tr>
+                    <tr><td><code>yoft help</code></td><td>Show usage information</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <strong>Yoft</strong> &mdash; A compiled programming language.
+                    <br><span class="footer-note">Formerly Engine. Rewritten from scratch.</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/annuaicoder/Engine-Lang">GitHub</a>
+                    <a href="#docs">Docs</a>
+                    <a href="#reference">Reference</a>
+                </div>
+            </div>
+            <div class="footer-copy">&copy; 2025 YoftLang. Open source under MIT License.</div>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,51 @@
+# Game logic for the Adventure project
+
+func clamp_min(x, min_val) {
+    if x < min_val {
+        return min_val
+    }
+    return x
+}
+
+func rest(hp) {
+    var heal = rand(1, 3)
+    show "You rest... (+" + str(heal) + " HP)"
+    return hp + heal
+}
+
+func explore(hp, gold) {
+    var roll = rand(1, 100)
+
+    # 1..60 : find gold
+    if roll <= 60 {
+        var found = rand(1, 10)
+        show "You found " + str(found) + " gold."
+        gold = gold + found
+        return [hp, gold]
+    }
+
+    # 61..85 : small trap
+    if roll <= 85 {
+        var dmg = rand(1, 4)
+        show "A trap hits you! (-" + str(dmg) + " HP)"
+        hp = hp - dmg
+        hp = clamp_min(hp, 0)
+        return [hp, gold]
+    }
+
+    # 86..100 : monster
+    var monster = rand(2, 6)
+    show "A monster attacks! (-" + str(monster) + " HP)"
+    hp = hp - monster
+    hp = clamp_min(hp, 0)
+
+    if hp == 0 {
+        show "You were defeated."
+        return [hp, gold]
+    }
+
+    var loot = rand(5, 15)
+    show "You defeated it and got " + str(loot) + " gold."
+    gold = gold + loot
+    return [hp, gold]
+}

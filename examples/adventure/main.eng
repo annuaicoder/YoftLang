@@ -1,0 +1,43 @@
+# Adventure (multi-file Engine project)
+
+import "utils.eng"
+import "game.eng"
+
+banner("Engine Adventure")
+show "A tiny multi-file project written in Engine."
+show ""
+help()
+
+var hp = 10
+var gold = 0
+
+while true {
+    show ""
+    var cmd = input("> ")
+
+    if cmd == "help" {
+        help()
+    } else if cmd == "stats" {
+        show "HP: " + str(hp)
+        show "Gold: " + str(gold)
+    } else if cmd == "rest" {
+        hp = rest(hp)
+        show "HP: " + str(hp)
+    } else if cmd == "explore" {
+        var result = explore(hp, gold)
+        hp = result[0]
+        gold = result[1]
+        show "HP: " + str(hp)
+        show "Gold: " + str(gold)
+
+        if hp == 0 {
+            show "Game over."
+            return
+        }
+    } else if cmd == "quit" {
+        show "bye"
+        return
+    } else {
+        show "Unknown command. Type 'help'."
+    }
+}

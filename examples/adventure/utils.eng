@@ -1,0 +1,15 @@
+# Shared helpers for the Adventure project
+
+func banner(title) {
+    show ""
+    show "=== " + title + " ==="
+}
+
+func help() {
+    show "Commands:"
+    show "  help      - show this message"
+    show "  stats     - show your current stats"
+    show "  explore   - explore and maybe find something"
+    show "  rest      - restore a little health"
+    show "  quit      - exit the game"
+}
