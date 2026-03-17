@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Engine-Lang - Minimal - Fast and Extremely Easy
 
 # Built by @annuaicoder
@@ -6,7 +6,7 @@
 ## Link to Youtube Channel / Handle: @codewithanas007
 =======
 # YoftLang
->>>>>>> a3020a6 (Full Rebrand Change To Yoft, Make Language Compiled, Rewrite Compiler In Go, Full Redesign)
+
 
 **Yoft** is a fast, compiled programming language that produces native binaries. It features clean syntax, zero runtime dependencies, and compiles through C for maximum performance.
 
@@ -38,13 +38,13 @@ sudo mv yoft /usr/local/bin/
 # Compile and run immediately
 yoft run hello.eng
 
-<<<<<<< HEAD
+
 # Or
 engine test.eng
 =======
 # Compile to native binary
 yoft build hello.eng -o hello
->>>>>>> a3020a6 (Full Rebrand Change To Yoft, Make Language Compiled, Rewrite Compiler In Go, Full Redesign)
+
 
 # Run the compiled binary directly
 ./hello
